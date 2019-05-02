@@ -12,10 +12,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -91,7 +87,7 @@ public class FragmentListaIncidencias extends Fragment {
         View view = inflater.inflate(R.layout.fragment_lista_incidencias, container, false);
 
         myList = new ArrayList<>();
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerId);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewID);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         //llenarLista();
         adapter = new RecyclerAdapter(myList);

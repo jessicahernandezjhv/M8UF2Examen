@@ -3,14 +3,8 @@ package com.dam.jessicahv.pruebamultimedia;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
-import android.net.Uri;
-import android.provider.CalendarContract;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.telephony.mbms.FileInfo;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +13,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -120,11 +109,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
         public RecyclerViewHolder(@NonNull final View itemView) {
             super(itemView);
-            txtName = (TextView) itemView.findViewById(R.id.idNombre);
-            txtInformacion = (TextView) itemView.findViewById(R.id.idInfo);
-            foto = (ImageView) itemView.findViewById(R.id.idImagen);
+            txtName = (TextView) itemView.findViewById(R.id.idName);
+            txtInformacion = (TextView) itemView.findViewById(R.id.idInformation);
+            foto = (ImageView) itemView.findViewById(R.id.idImage);
             myCheckBox = (CheckBox) itemView.findViewById(R.id.idCheckBox);
-            cross = (ImageView) itemView.findViewById(R.id.idCross);
+            cross = (ImageView) itemView.findViewById(R.id.idDoneCross);
         }
     }
 }

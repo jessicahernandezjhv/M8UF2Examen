@@ -1,6 +1,5 @@
 package com.dam.jessicahv.pruebamultimedia;
 
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -31,13 +30,13 @@ public class MainActivity extends AppCompatActivity implements FragmentReportarI
         setContentView(R.layout.activity_main);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
 
         reportarIncidencia = new FragmentReportarIncidencia();
         listaIncidencias = new FragmentListaIncidencias();
 
-        getSupportFragmentManager().beginTransaction().add(R.id.contenedorFragments, reportarIncidencia).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.content, reportarIncidencia).commit();
 
         audioPlayer = new MediaPlayer();
         audioPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -86,10 +85,10 @@ public class MainActivity extends AppCompatActivity implements FragmentReportarI
                 }
                 break;
             case R.id.item1:
-                transaction.replace(R.id.contenedorFragments, reportarIncidencia);
+                transaction.replace(R.id.content, reportarIncidencia);
                 break;
             case R.id.item2:
-                transaction.replace(R.id.contenedorFragments, listaIncidencias);
+                transaction.replace(R.id.content, listaIncidencias);
                 break;
         }
         transaction.commit();

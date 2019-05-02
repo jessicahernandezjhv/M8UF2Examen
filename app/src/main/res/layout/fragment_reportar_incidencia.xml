@@ -28,7 +28,7 @@
             android:layout_height="30dp" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imagePreview"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
@@ -39,7 +39,7 @@
             android:layout_height="30dp" />
 
         <ImageButton
-            android:id="@+id/takePictureBtn"
+            android:id="@+id/selectPictureBtn"
             android:layout_width="25pt"
             android:layout_height="25pt"
             android:layout_gravity="center"
@@ -51,7 +51,7 @@
             android:layout_height="25dp" />
 
         <EditText
-            android:id="@+id/userPictureName"
+            android:id="@+id/userIssueName"
             android:layout_width="220dp"
             android:layout_height="30dp"
             android:layout_gravity="center"

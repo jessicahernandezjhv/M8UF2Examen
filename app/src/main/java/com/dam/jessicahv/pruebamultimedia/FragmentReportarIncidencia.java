@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,11 +29,7 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.UUID;
 
 /**
@@ -120,10 +115,10 @@ public class FragmentReportarIncidencia extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_reportar_incidencia, container, false);
-        takePicture = view.findViewById(R.id.takePictureBtn);
+        takePicture = view.findViewById(R.id.selectPictureBtn);
         uploadPicture = view.findViewById(R.id.uploadImageBtn);
-        imageView = view.findViewById(R.id.imageView);
-        editText = view.findViewById(R.id.userPictureName);
+        imageView = view.findViewById(R.id.imagePreview);
+        editText = view.findViewById(R.id.userIssueName);
         editTexAula = view.findViewById(R.id.userAula);
 
         //Firebase Storage
