@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "983198131152",
+    "firebase_url": "https://pruebam8uf2.firebaseio.com",
+    "project_id": "pruebam8uf2",
+    "storage_bucket": "pruebam8uf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983198131152:android:0ed8c1d00003d5c8",
+        "android_client_info": {
+          "package_name": "com.dam.jessicahv.pruebamultimedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983198131152-qfhhgsm04g5oqubsu4q8t4tfp4bbrc4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3E71icA3qPX_Lk4ThoveD0AVwg33T3Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983198131152-qfhhgsm04g5oqubsu4q8t4tfp4bbrc4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.dam.jessicahv.examenmultimedia;
+package com.dam.jessicahv.pruebamultimedia;
 
 import org.junit.Test;
 

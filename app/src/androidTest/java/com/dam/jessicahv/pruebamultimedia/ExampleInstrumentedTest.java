@@ -1,4 +1,4 @@
-package com.dam.jessicahv.examenmultimedia;
+package com.dam.jessicahv.pruebamultimedia;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.dam.jessicahv.examenmultimedia", appContext.getPackageName());
+        assertEquals("com.dam.jessicahv.pruebamultimedia", appContext.getPackageName());
     }
 }
