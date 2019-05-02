@@ -71,6 +71,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         String imageURL = myList.get(position).getImageURL();
         Log.d("myTag", imageURL);
 
+        
+
         try {
             if (imageURL.startsWith("http")) {
                 holder.foto.setImageBitmap(getBitmapFromURL(imageURL));
@@ -89,10 +91,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    Toast.makeText(buttonView.getContext(), "Is checked " + position, Toast.LENGTH_SHORT).show();
                     setFadeAnimation(holder.cross);
                 } else {
-                    Toast.makeText(buttonView.getContext(), "Not checked " + position, Toast.LENGTH_SHORT).show();
                     setFadeOutAnimation(holder.cross);
                 }
             }
