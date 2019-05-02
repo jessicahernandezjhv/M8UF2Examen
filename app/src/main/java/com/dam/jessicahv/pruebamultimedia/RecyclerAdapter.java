@@ -69,16 +69,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.myCheckBox.setChecked(myList.get(position).isStatus());
 
         String imageURL = myList.get(position).getImageURL();
-        Log.d("myTag", imageURL);
-
-        
 
         try {
-            if (imageURL.startsWith("http")) {
-                holder.foto.setImageBitmap(getBitmapFromURL(imageURL));
-            }
+            holder.foto.setImageBitmap(getBitmapFromURL(imageURL));
         } catch (Exception e) {
-
         }
 
         if (holder.myCheckBox.isChecked()) {

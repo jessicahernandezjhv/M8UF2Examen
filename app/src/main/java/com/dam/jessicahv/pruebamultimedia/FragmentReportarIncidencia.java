@@ -189,10 +189,8 @@ public class FragmentReportarIncidencia extends Fragment {
                                     taskSnapshot.getUploadSessionUri().getPath() + "/" +
                                     taskSnapshot.getMetadata().getPath();
 
-                            String newImageUri = imageUri.replace("images/", "image%2F");
-
                             //ImageUploadInfo imageUploadInfo = new ImageUploadInfo(fileName, taskSnapshot.getMetadata().getReference().getDownloadUrl().toString(), false);
-                            ImageUploadInfo imageUploadInfo = new ImageUploadInfo(fileName, aulaName, newImageUri, false);
+                            ImageUploadInfo imageUploadInfo = new ImageUploadInfo(fileName, aulaName, imageUri, false);
 
                             // Getting image upload ID
                             String ImageUploadId = databaseReference.push().getKey();
