@@ -23,7 +23,7 @@
             android:layout_width="100dp"
             android:layout_height="130dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_pause_circle_outline_black_24dp"/>
+            android:src="@drawable/ic_close_black_24dp"/>
 
         <LinearLayout
             android:layout_marginLeft="120dp"
@@ -55,10 +55,4 @@
 
         </LinearLayout>
     </FrameLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimary"
-        android:layout_marginTop="11dp"
-        android:layout_below="@id/idImagen"/>
 </LinearLayout>

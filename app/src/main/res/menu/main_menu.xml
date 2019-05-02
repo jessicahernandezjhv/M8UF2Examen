@@ -2,16 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <item android:id="@+id/item1"
-        android:title="Enviar"
+        android:title="Enviar incidencia"
         android:icon="@drawable/ic_build_black_24dp"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 
     <item android:id="@+id/item2"
-        android:title="Ver lista"
+        android:title="Ver incidencias"
         android:icon="@drawable/ic_clear_all_black_24dp"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 
     <item android:id="@+id/musicItem"
         android:title="Item 1"

@@ -65,7 +65,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(@NonNull final RecyclerViewHolder holder, final int position) {
         holder.txtName.setText(myList.get(position).getImageName());
-        holder.txtInformacion.setText(myList.get(position).getImageURL());
+        holder.txtInformacion.setText(myList.get(position).getAula());
         holder.myCheckBox.setChecked(myList.get(position).isStatus());
 
         String imageURL = myList.get(position).getImageURL();

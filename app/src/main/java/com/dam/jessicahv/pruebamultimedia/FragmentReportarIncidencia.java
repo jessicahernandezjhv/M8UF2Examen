@@ -56,6 +56,7 @@ public class FragmentReportarIncidencia extends Fragment {
     Button uploadPicture;
     ImageView imageView;
     EditText editText;
+    EditText editTexAula;
 
     //private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1888;
     private String [] permissions = {"android.permission.WRITE_EXTERNAL_STORAGE"};
@@ -123,6 +124,7 @@ public class FragmentReportarIncidencia extends Fragment {
         uploadPicture = view.findViewById(R.id.uploadImageBtn);
         imageView = view.findViewById(R.id.imageView);
         editText = view.findViewById(R.id.userPictureName);
+        editTexAula = view.findViewById(R.id.userAula);
 
         //Firebase Storage
         storage = FirebaseStorage.getInstance();
@@ -151,7 +153,7 @@ public class FragmentReportarIncidencia extends Fragment {
         uploadPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadImage(editText);
+                uploadImage(editText, editTexAula);
             }
         });
 
@@ -168,7 +170,7 @@ public class FragmentReportarIncidencia extends Fragment {
     }
 
 
-    private void uploadImage(EditText editText) {
+    private void uploadImage(EditText editText, EditText editTexAula) {
         if(filePath != null) {
             final ProgressDialog progressDialog = new ProgressDialog(getActivity());
             progressDialog.setTitle("Uploading...");
@@ -176,6 +178,7 @@ public class FragmentReportarIncidencia extends Fragment {
 
             StorageReference ref = storageReference.child("images/"+ UUID.randomUUID().toString());
             final String fileName = editText.getText().toString();
+            final String aulaName = editTexAula.getText().toString();
 
             ref.putFile(filePath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -189,7 +192,7 @@ public class FragmentReportarIncidencia extends Fragment {
                             String newImageUri = imageUri.replace("images/", "image%2F");
 
                             //ImageUploadInfo imageUploadInfo = new ImageUploadInfo(fileName, taskSnapshot.getMetadata().getReference().getDownloadUrl().toString(), false);
-                            ImageUploadInfo imageUploadInfo = new ImageUploadInfo(fileName, newImageUri, false);
+                            ImageUploadInfo imageUploadInfo = new ImageUploadInfo(fileName, aulaName, newImageUri, false);
 
                             // Getting image upload ID
                             String ImageUploadId = databaseReference.push().getKey();

@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements FragmentReportarI
 
         audioPlayer = new MediaPlayer();
         audioPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-        String audioUrl = "http://docs.google.com/uc?export=download&id=1SDCUlrEoxzcU2pehSMljEyxyAJkc3-mw";
+        String audioUrl = "https://firebasestorage.googleapis.com/v0/b/pruebam8uf2.appspot.com/o/music%2Fbensound-funnysong.mp3?alt=media&token=0a429f48-cfa2-4ed3-a127-a8cdc010ada1";
 
         try {
             audioPlayer.setDataSource(audioUrl);
@@ -73,18 +73,17 @@ public class MainActivity extends AppCompatActivity implements FragmentReportarI
 
                 if (audioPlayer.isPlaying()) {
                     // STOP MUSIC
-                    toolbar.getMenu().getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_play_circle_outline_black_24dp));
+                    toolbar.getMenu().getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_play_circle_outline_black_24dp));
                     audioPlayer.pause();
                     musicButtonState = false;
                     Toast.makeText(this, "Pause", Toast.LENGTH_SHORT).show();
                 } else {
                     // PLAY MUSIC
-                    toolbar.getMenu().getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_pause_circle_outline_black_24dp));
+                    toolbar.getMenu().getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_pause_circle_outline_black_24dp));
                     audioPlayer.start();
                     musicButtonState = true;
                     Toast.makeText(this, "Play", Toast.LENGTH_SHORT).show();
                 }
-
                 break;
             case R.id.item1:
                 transaction.replace(R.id.contenedorFragments, reportarIncidencia);

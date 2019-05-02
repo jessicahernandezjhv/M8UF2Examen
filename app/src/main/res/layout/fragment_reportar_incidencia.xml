@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentReportarIncidencia"
-    android:background="@android:color/holo_orange_light">
+    android:background="@android:color/darker_gray">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,12 +14,12 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="50dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FRAGMENT REPORTAR INCIDENCIAS"
+            android:text="REPORTAR INCIDENCIA"
             android:textAlignment="center"
             android:textSize="18dp"/>
 
@@ -27,18 +27,16 @@
             android:layout_width="match_parent"
             android:layout_height="30dp" />
 
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_pause_circle_outline_black_24dp"/>
+            android:src="@drawable/ic_exit_to_app_black_24dp"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="30dp" />
-
 
         <ImageButton
             android:id="@+id/takePictureBtn"
@@ -46,7 +44,7 @@
             android:layout_height="25pt"
             android:layout_gravity="center"
             android:scaleType="fitStart"
-            android:src="@drawable/ic_pause_circle_outline_black_24dp" />
+            android:src="@drawable/ic_create_new_folder_black_24dp" />
 
         <Space
             android:layout_width="match_parent"
@@ -59,6 +57,19 @@
             android:layout_gravity="center"
             android:background="@android:color/white"
             android:hint="Nombre incidencia"
+            android:textSize="12dp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/userAula"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:hint="Aula"
             android:textSize="12dp"/>
 
         <Space
